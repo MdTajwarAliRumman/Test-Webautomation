@@ -9,5 +9,5 @@ public class HomePage extends BasePage{
     public By login_signup = By.xpath("//a[normalize-space()='Signup / Login']");
     public By logout_btn  = By.xpath("//a[normalize-space()='Logout']");
 
-    public void n
+
 }
