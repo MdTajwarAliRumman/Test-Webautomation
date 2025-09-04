@@ -28,4 +28,19 @@ public class BasePage {
     public String getPageTitle(){
         return getDriver().getTitle();
     }
+
+    public void loadAWebPage(String url){
+        getDriver().get(url);
+    }
+
+    public void getElementTxt(By locator){
+        getElement(locator).getText();
+    }
+    public boolean is_Element_Visible(By locator){
+        try {
+            return getElement(locator).isDisplayed();
+        }catch (Exception e){
+            return false;
+        }
+    }
 }

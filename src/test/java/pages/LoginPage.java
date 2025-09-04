@@ -12,7 +12,9 @@ public class LoginPage extends BasePage{
    public By Login_btn = By.xpath("//button[normalize-space()='Login']");
    public By error_msg = By.xpath("//p[normalize-space()='Your email or password is incorrect!']");
 
+   HomePage homePage = new HomePage();
    public void navigateToLoginPage(){
+      homePage.loadHomePage();
       homePage.clickOnElement(homePage.login_signup);
    }
 }
