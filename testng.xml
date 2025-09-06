@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/WebAutomation projects/WebAutomationTest/src/test/java/testcases">
+        <classes>
+            <class name="testcases.TestHomePage">
+                <methods>
+                    <include name="testHomePageUrl"/>
+                    <include name="testHomePageTitle"/>
+                </methods>
+            </class>
+            <class name="testcases.TestLoginPage">
+                <methods>
+                    <include name="testLoginWithValidCreds"/>
+                    <include name="loginWithInvalidPassword"/>
+                    <include name="loginWithInvalidCreds"/>
+                    <include name="testLoginWithValidPassAndInvalidMail"/>
+                    <include name="testLoginWithoutCreds"/>
+                    <include name="testLoginWithoutPassAndwithEmail"/>
+                </methods>
+            </class>
+            <class name="testcases.TestLoginPageInSingleTC">
+                <methods>
+                    <include name="testLoginWithValidCreds"/>
+                    <include name="loginWithInvalidPassword"/>
+                    <include name="loginWithInvalidCreds"/>
+                    <include name="testLoginWithValidPassAndInvalidMail"/>
+                    <include name="testLoginWithoutCreds"/>
+                    <include name="testLoginWithoutPassAndwithEmail"/>
+                    <include name="testLoginWithInvalidCreds"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
