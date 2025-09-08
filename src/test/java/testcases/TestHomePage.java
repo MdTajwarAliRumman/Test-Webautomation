@@ -1,6 +1,7 @@
 package testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.DriverSetup;
@@ -8,6 +9,11 @@ import utilities.DriverSetup;
 public class TestHomePage extends DriverSetup {
     //Homepage er eleement gulo access korte home page er object create kora lagbe
     HomePage homePage = new HomePage();
+
+    @AfterMethod
+    public void addScreenshotAfterTest(){
+        homePage.addScreenshot();
+    }
 
     @Test
     public void testHomePageUrl() {

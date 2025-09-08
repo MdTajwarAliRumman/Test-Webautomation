@@ -1,5 +1,8 @@
 package testcases;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -19,9 +22,10 @@ public class TestLoginPage extends DriverSetup {
         loginPage.navigateToLoginPage();
     }
 
-    @Test
+    @Test(description = "Test with valid credentials")
+    @Description("User is trying to login using valid input")
     public void testLoginWithValidCreds() {
-
+        Allure.label("Severity","Critical");
         loginPage.writeOnElement(loginPage.login_email, "nogases958@lanipe.com");
         loginPage.writeOnElement(loginPage.login_pass, "12345678");
         loginPage.clickOnElement(loginPage.Login_btn);
